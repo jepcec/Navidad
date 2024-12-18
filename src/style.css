@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    background-color: #151515;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  #nameDisplay {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    z-index: 10;
+  }
+
+  /* Estilo para el contenedor de los botones */
+.buttons-container {
+    display: flex;              /* Activamos flexbox */
+    flex-wrap: wrap;            /* Permitimos que los botones se acomoden en varias filas */
+    justify-content: flex-start;/* Los botones se alinean desde la izquierda */
+    gap: 10px;                  /* Espacio entre los botones */
+    padding: 20px;
+  }
+  
+  /* Estilo de los botones */
+  .name-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    flex-shrink: 0;             /* Evita que los botones se encojan */
+  }
+  
+  /* Efecto hover para los botones */
+  .name-button:hover {
+    background-color: #45a049;
+  }
+
+  #msg {
+    color: red; /* Color del texto */
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 
+        0 0 5px red, 
+        0 0 10px red, 
+        0 0 15px red, 
+        0 0 20px red, 
+        0 0 25px red;
+}
+
+  /* animcion */
+  @keyframes boom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.boom-animation {
+    animation: boom 0.6s ease-in-out;
+}
+@keyframes vanish {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/* Clase para aplicar la animación de desaparición */
+.vanish-animation {
+    animation: vanish 0.6s ease-in-out;
+}
+  
