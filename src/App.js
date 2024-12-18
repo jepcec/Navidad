@@ -8,9 +8,9 @@ const fireworks = new Fireworks(container, {
   sound: {
     enabled: true,
     files: [
-      '/public/sound/explosion0.mp3',
-      '/public/sound/explosion1.mp3',
-      '/public/sound/explosion2.mp3'
+      location.href + '/public/sound/explosion0.mp3',
+      location.href + '/public/sound/explosion1.mp3',
+      location.href + '/public/sound/explosion2.mp3'
     ],
     volume: {
       min: 5,
